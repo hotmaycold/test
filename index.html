@@ -1,0 +1,466 @@
+
+<!-- saved from url=(0070)https://zjy.jxjst.gov.cn/z/api/wx/aptInfo/QY_SAFETY/0anhd-je0kyg-0ej4w -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>证书详情</title>
+    <link href="./证书详情_files/swiper.min.css" rel="stylesheet">
+    <style type="text/css">
+
+        .hidden {
+            display: none
+        }
+
+        .active {
+            display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        a,
+        a:hover,
+        a:active,
+        a:focus,
+        a:visited {
+            text-decoration: none;
+        }
+
+        .details-con {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .details-header {
+            width: 90%;
+            margin: 0 auto 10px auto;
+            padding: 20px 5%;
+            text-align: right;
+            background-color: #fff;
+            border-top: 10px solid #f5f5f5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .details-header .details-header-left {
+            width: 13%;
+            margin-right: 15px;
+            float: left;
+            text-align: left;
+        }
+
+        .details-header .details-header-left img {
+            width: 100%;
+            max-height: 3.75rem;
+        }
+
+        .details-header .details-header-right {
+            width: 80%;
+            float: left;
+            text-align: left;
+        }
+
+        .details-header .details-header-right span {
+            display: block;
+            color: #333;
+            font-size: 1rem;
+            padding: 0.3rem 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .details-header a {
+            color: #409EFF;
+            font-size: 0.8rem;
+            padding-right: 15px;
+            background-image: url(/assets/module/gcjsy/xcx/appcenter/preview/image/aptInfo/down_load.png);
+            background-position: right 0 bottom 2px;
+            background-repeat: no-repeat;
+            background-size: auto 0.6rem;
+        }
+
+        .details-tab {
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .details-tab > span {
+            display: block;
+            float: left;
+            width: 50%;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .details-tab > span a {
+            padding: 10px 0;
+            color: #666;
+            display: inline-block;
+        }
+
+        .details-tab span.active a {
+            color: #409EFF;
+            border-bottom: 4px solid #409EFF;
+        }
+
+        .details-box {
+            font-size: 1rem;
+            box-sizing: border-box;
+            color: #333;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .details-box > ul {
+            display: none;
+        }
+
+        .details-box ul.details-box-xinxi {
+            font-size: 1rem;
+        }
+
+        .details-box ul.details-box-xinxi li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+
+        .details-box ul.details-box-xinxi li > div:nth-child(2) {
+            float: left;
+            width: calc(74% - 40px);
+            color: #000;
+        }
+
+        .details-box ul.details-box-xinxi li > div:nth-child(1) {
+            color: #a5a5a5;
+            width: 26%;
+            float: left;
+            padding-right: 20px;
+        }
+
+        .details-box ul.details-box-xinxi li > .details-box-right p {
+            font-size: 0.8rem;
+            color: #999;
+            padding-top: 8px;
+        }
+
+        .details-box ul.details-box-xinxi li > .details-box-right p:not(:last-child) {
+            border-bottom: 1px dashed #666;
+            margin-bottom: 15px;
+            padding-bottom: 11px;
+        }
+
+        .details-box ul.details-box-xinxi li > .details-box-right p.expire {
+            color: #FF6600;
+        }
+
+        .details-box ul.details-box-xinxi li:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0;
+        }
+
+        .details-box ul.details-box-guiji {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        .details-box ul.details-box-guiji li {
+            width: 100%;
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .details-box ul.details-box-guiji li:not(:last-child):before {
+            content: '';
+            width: 1px;
+            height: calc(100% + 100px);
+            background-color: #409EFF;
+            position: absolute;
+            left: 9px;
+            top: 10px;
+            z-index: 2;
+        }
+
+        .details-box ul.details-box-guiji li i {
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #409EFF;
+            border: 5px solid #D9ECFF;
+            border-radius: 50%;
+            z-index: 3;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .details-box ul.details-box-guiji li .guiji-right {
+            padding: 0 10px 0 26px;
+        }
+
+        .details-box ul.details-box-guiji li .guiji-right > div {
+            width: 100%;
+            word-break: break-all;
+        }
+
+        .details-box ul.details-box-guiji li .guiji-right > div:nth-child(1) {
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .details-box ul.details-box-guiji li .guiji-right > div:nth-child(1) span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            float: right;
+        }
+
+        .details-box ul.details-box-guiji li .guiji-right > div:nth-child(2) {
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        .abnormal-text {
+            background: rgba(254, 246, 234, 1);
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #ff9900;
+        }
+
+        .details-header.corner:after {
+            content: "实习期";
+            position: absolute;
+            right: -41px;
+            top: 12px;
+            transform: rotate(45deg);
+            color: #fff;
+            background: #ff6f6f;
+            padding: 4px;
+            width: 120px;
+            text-align: center;
+            font-size: 0.6rem;
+        }
+
+        .shadow {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 18% 1.5rem;
+            box-sizing: border-box;
+            z-index: 999;
+        }
+
+        .popup {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .popupHead, .popupContent {
+            padding: 1rem 2rem;
+        }
+
+        .popupHead {
+            background-color: #19b0ff;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .headTitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .headText {
+            letter-spacing: 2px;
+        }
+
+        .headText, .contentTitle {
+            font-size: 1rem;
+        }
+
+        .headTime, .contentTime {
+            font-size: 0.8rem;
+        }
+
+        .popupContent {
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .popupContent li {
+            padding-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .popupFoot {
+            height: 2.8rem;
+            text-align: center;
+            padding: 0.6rem 0;
+            border-top: 1px solid #e6e6e6;
+            box-sizing: border-box;
+        }
+
+        .close {
+            display: inline-block;
+            font-size: 1rem;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            padding: 0 0.8rem;
+            text-decoration: none;
+            color: #fff;
+            background-color: #19b0ff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="details-con">
+    
+    <div class="details-header">
+        <div class="details-header-right" style="width:100%">
+                <span>南昌对外工程有限责任公司</span>
+                <span>安全生产许可证</span>
+            </div>
+        <div style="clear: both;"></div>
+        </div>
+
+
+    <div class="details-box" id="tabbox">
+
+        <ul class="details-box-xinxi" style="display: block">
+
+
+                <li>
+                    <div>证书编号</div>
+                    <div class="details-box-right">(赣)JZ安许证字[2005]010063</div>
+                </li>
+
+                <li>
+                    <div>单位名称</div>
+                    <div class="details-box-right">南昌对外工程有限责任公司</div>
+                </li>
+
+                <li>
+                    <div>单位地址</div>
+                    <div class="details-box-right">江西省南昌市东湖区叠山路１１３号</div>
+                </li>
+
+                <li>
+                    <div>主要负责人</div>
+                    <div class="details-box-right">李钢</div>
+                </li>
+
+                <li>
+                    <div>社会统一信用代码</div>
+                    <div class="details-box-right">91360100158375451X</div>
+                </li>
+
+                <li>
+                    <div>经济类型</div>
+                    <div class="details-box-right">有限责任公司(非自然人投资或控股的法人独资)</div>
+                </li>
+                <li>
+                    <div>许可范围</div>
+                    <div class="details-box-right">建筑施工</div>
+                </li>
+
+                <li>
+                    <div>注册日期</div>
+                    <div class="details-box-right">2019年09月19日</div>
+                </li>
+
+                <li>
+                    <div>有效期至</div>
+                    <div class="details-box-right">2020年12月31日</div>
+                </li>
+                <li>
+                    <div>发证机关</div>
+                    <div class="details-box-right">江西省住房和城乡建设厅</div>
+                </li>
+
+            </ul>
+        <ul class="details-box-guiji">
+            </ul>
+
+    </div>
+</div>
+
+<div class="shadow hidden">
+
+</div>
+
+<script>
+  window.subItemList =null;
+</script>
+<script src="./证书详情_files/template.js.下载"></script>
+<script src="./证书详情_files/jquery.min.js.下载"></script>
+<script src="./证书详情_files/apt.js.下载"></script>
+<script src="./证书详情_files/dateUtil.js.下载"></script>
+<script>
+
+  //重写alert
+  window.alert = function (name) {
+    var iframe = document.createElement("IFRAME");
+    iframe.style.display = "none";
+    document.documentElement.appendChild(iframe);
+    window.frames[0].window.alert(name);
+    iframe.parentNode.removeChild(iframe);
+  }
+
+  function tips(tips) {
+    alert(tips);
+  }
+</script>
+
+
+<script id="subItemList" type="text/html">
+    <div class="popup">
+        <div class="popupHead">
+            <div class="headTitle">类别小项</div>
+            <div>
+                <p class="headText">资质序列：<span>{{item.certItemName}}</span></p>
+                <p class="headTime">
+                    取得日期：<span>{{item.certApproveDate | formatStrDate:'yyyy-MM-dd'}}</span></p>
+            </div>
+        </div>
+        <ul class="popupContent">
+            {{each rows value index}}
+            <li>
+                <div class="contentTitle">{{value.paramDataName}}</div>
+                <div class="contentTime">取得日期：{{value.approveDate | formatStrDate:'yyyy-MM-dd'}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        <div class="popupFoot">
+            <a class="close" href="javascript:;">关闭</a>
+        </div>
+    </div>
+</script>
+
+<script>
+
+</script>
+
+
+
+
+</body></html>
